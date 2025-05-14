@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bookshelf">
+        <div class="book" data-index="1"></div>
+        <div class="book" data-index="2"></div>
+        <div class="book" data-index="3"></div>
+        <div class="book" data-index="4"></div>
+        <div class="book" data-index="5"></div>
+    </div>
+
+    <article class="book-content">
+  <div class="book-cover"></div>
+
+  <!-- Page 1 -->
+  <div class="book-page page" style="--i: 1">
+    <h1>Be wise while counting</h1>
+    <p>One day in Akbar’s court someone asked the question... (page 1)</p>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="book-page page" style="--i: 2">
+    <h1>The Clever Barber</h1>
+    <p>A clever barber once tricked a thief... (page 2)</p>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="book-page page" style="--i: 3">
+    <h1>The Lost Ring</h1>
+    <p>Birbal found a missing ring using logic... (page 3)</p>
+  </div>
+</article>
+
+<button id="next">Next Page</button>
+<button id="prev">Previous Page</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+

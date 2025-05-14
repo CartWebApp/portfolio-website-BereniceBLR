@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Berenice Portfolio Flipbook</title>
+</head>
+<body>
+  <div class="book-wrapper">
+    <article class="book-content">
+      <!-- Cover Page -->
+      <div class="page cover" style="--i: 0">
+        <h1>Berenice Lopez Reyes</h1>
+        <p>Welcome to my portfolio</p>
+      </div>
+
+      <!-- Image Carousel (Portfolio Page) -->
+      <div class="page carousel-page" style="--i: 1">
+        <h1>Portfolio</h1>
+        <div class="carousel-images">
+          <div class="carousel-item" style="background-image: url('web-project1.jpg');"></div>
+          <div class="carousel-item" style="background-image: url('web-project2.jpg');"></div>
+          <div class="carousel-item" style="background-image: url('web-project3.jpg');"></div>
+        </div>
+      </div>
+
+      <!-- Hobbies Page -->
+      <div class="page" style="--i: 2">
+        <h1>Hobbies</h1>
+        <p>Beyond code: painting, photography, gaming, and more.</p>
+      </div>
+
+      <!-- About Me Page -->
+      <div class="page" style="--i: 3">
+        <h1>About Me</h1>
+        <p>Hello! I'm Berenice, a creative problem solver passionate about technology, design, and storytelling.</p>
+      </div>
+
+      <!-- Content Overview Page -->
+      <div class="page" style="--i: 4">
+        <h1>Content Overview</h1>
+        <p>Explore my journey through education, work, and personal achievements. Below are highlights of each section:</p>
+        <ul>
+          <li><strong>About Me:</strong> Personal background and professional goals</li>
+          <li><strong>Resume:</strong> Key educational and professional experiences</li>
+          <li><strong>Portfolio:</strong> My web, writing, and art projects</li>
+          <li><strong>Contact:</strong> Ways to reach out for collaboration</li>
+        </ul>
+      </div>
+
+      <!-- Resume Page -->
+      <div class="page" style="--i: 5">
+        <h1>Resume</h1>
+        <h3>Education</h3>
+        <p>Degree: Bachelor of Science in Computer Science - University X</p>
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript, React</li>
+          <li>Photoshop, Illustrator</li>
+        </ul>
+        <h3>Experience</h3>
+        <p>Intern at Company Y - 2024</p>
+        <p><a href="resume.pdf" target="_blank">Download full resume (PDF)</a></p>
+      </div>
+
+      <!-- Contact Page -->
+      <div class="page" style="--i: 6">
+        <h1>Contact</h1>
+        <p>Feel free to reach out to me via email or connect with me on social media!</p>
+        <form action="mailto:berenice@example.com" method="post" enctype="text/plain">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Thank You Page -->
+      <div class="page" style="--i: 7">
+        <h1>Thank You</h1>
+        <p>Thank you for exploring my portfolio. I look forward to hearing from you!</p>
+      </div>
+
+      <!-- Developer Journal Page -->
+      <div class="page" style="--i: 8">
+        <h1>Developer Journal</h1>
+        <p>This log tracks my daily progress, including inspirations, challenges, and lessons learned:</p>
+        <ul>
+          <li><strong>Day 1:</strong> Choosing a theme and color palette</li>
+          <li><strong>Day 2:</strong> Building responsive layout with Flexbox</li>
+        </ul>
+      </div>
+
+    </article>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button id="prev">⟨ Prev</button>
+      
+      <button id="next">Next ⟩</button>
+    </div>
+  </div>
+  <a href="index.html"><button id="home">Home</button></a>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+

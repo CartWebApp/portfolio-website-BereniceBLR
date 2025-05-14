@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url("pics/room.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.book-wrapper {
+  text-align: center;
+}
+
+.book-content {
+  position: absolute;
+  top: 52%;
+  left: 20%;
+  width: 330px;
+  height: 467px;
+  background: #C8AA94;
+  box-shadow: inset 600px 0 50px #000000cc, 0 20px 100px #000000e6;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  transition: 2s cubic-bezier(0, 0, .3, .88);
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff8dc;
+  padding: 20px;
+  border-left: 7px solid #3B2E26;
+  border-bottom: 5px solid #3B2E26;
+  transform-origin: left;
+  transition: transform 1s ease;
+  transform: rotateY(0deg);
+  z-index: calc(100 - var(--i));
+  backface-visibility: hidden;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.page h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.page p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.page.cover {
+  background: url("pics/book-cover.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* Carousel Styles */
+.carousel-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-images {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 300px; /* Adjust height for carousel items */
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 82%;
+  left: 20%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+.nav-buttons button {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 18px;
+  padding: 10px 25px;
+  border: none;
+  background: #3B2E26;
+  color: #fff8dc;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-buttons button:hover {
+  background: #5a4035;
+  transform: scale(1.05);
+}
+
+#home {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #3B2E26;
+  color: #fff8dc;
+  padding: 10px 20px;
+  border: none;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10; /* Ensure the button is on top of other elements */
+}
+
+#home:hover {
+  background-color: #5a4035;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .book-content {
+    width: 280px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-content {
+    width: 220px;
+    height: 350px;
+  }
+}
+
